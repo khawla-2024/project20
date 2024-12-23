@@ -37,7 +37,7 @@ const SharePosts = () => {
           <Input
             id="share"
             name="share"
-            placeholder="Share your thoughts..."
+            placeholder="Share your comments and recommendations with us..."
             type="textarea"
             value={postMsg}
             onChange={(e) => setpostMsg(e.target.value)}

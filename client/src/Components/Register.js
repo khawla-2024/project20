@@ -1,4 +1,3 @@
-
 import {
   Button,
   Container,
@@ -34,15 +33,16 @@ const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     const userData = {
-      name: data.name,
-      email: data.email,
-      password: data.password,
+      name: name,
+      email: email,
+      password: password,
     };
     dispatch(registerUser(userData));
     navigate("/login");
   };
+
   return (
     <div
       style={{
@@ -97,7 +97,7 @@ const Register = () => {
                 })}
               />
               <p className="error">{errors.password?.message}</p>
-            </div>      
+            </div>
             <div className="form-group">
               <input
                 type="password"
@@ -110,9 +110,9 @@ const Register = () => {
               />
               <p className="error">{errors.confirmPassword?.message}</p>
             </div>
-            <button color="primary" className="button w-100 mt-3">
+            <Button color="primary" className="button w-100 mt-3">
               Register
-            </button>
+            </Button>
           </section>
         </form>
         <div className="mt-4 text-center">

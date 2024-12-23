@@ -91,10 +91,13 @@ export const userSlice = createSlice({
         state.isSuccess = true;
         state.user = action.payload.user;
         state.msg = action.payload.msg;
+        state.isLoading= false;
       })
       .addCase(registerUser.rejected, (state) => {
         state.isError = true;
         state.msg = "Unexpected error is occured";
+        state.isLoading= false;
+
       })
       .addCase(login.pending, (state) => {
         state.isLoading = true;

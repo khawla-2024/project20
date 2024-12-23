@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 
-const URI = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@postitcluster.k8luk.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority&appName=PostITCluster`;
+const URI =`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@postitcluster.k8luk.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority&appName=PostITCluster`;
 //const URI = "mongodb+srv://admin:csse4103@postitcluster.k8luk.mongodb.net/postITDb?retryWrites=true&w=majority&appName=PostITCluster";
 
 mongoose.connect(URI);
